@@ -1,0 +1,155 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header img {
+    width: 100%;
+    max-height: 300px;
+    height: auto;
+}
+
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    left: 1100px;
+    position:absolute;
+    z-index: 1;
+}
+
+header ul li{
+    display: inline;
+    margin-right: 50px;
+    padding-top: 60px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #f79521;
+}
+
+main {
+    background-color: whitesmoke;
+    margin-top: -20px;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+.quem-sou {
+    display: flexbox;
+    max-width: 900px;
+    width: auto;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    text-align: center;
+    border: 2px inset #d9d9d9;
+    border-radius: 10px;
+    max-width: 1290px;
+    width: auto;
+    height: 250px;
+    margin-left: 80px;
+    
+}
+    
+.grid-container > div {
+    border-right: 1px solid #d9d9d9;
+}
+
+div a {
+    color: black;
+    text-decoration: none;
+}
+
+div a:hover {
+    color: #288a93;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    padding: 40px;
+    width: 100%;
+    grid-gap: 50px;
+}
+
+.grid-projetos img {
+    border: 3px outset whitesmoke;
+    border-radius: 10px;
+    margin-left: 260px;
+}
+
+main h4 {
+    float: left;
+    text-align: center;
+    max-width: 25%;
+    margin: 60px 0px 0px 350px;
+}
+
+main h2 {
+    padding-top: 50px;
+}
+
+form {
+    padding: 20px;
+    margin-left: 700px;
+}
+
+form label {
+    display: block;
+    font-size: 18x;
+}
+
+form input {
+    display: block;
+    font-size: 14px;
+    width: 30%;
+    height: 20px;
+}
+
+form button {
+    font-size: 14px;
+    background-color: #288a93;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #d9d9d9;
+    max-height: 300px;
+    height: auto;
+}
+
+.quem-sou-rodape img {
+    float: left;
+    position: absolute;
+    margin: 10px 0px 0px 30px;
+}
+
+.quem-sou-rodape > p {
+    float: right;
+    position: relative;
+    max-width: 25%;
+    text-align: center;
+    margin: 30px 900px 0px 0px;
+}
+
+.midias-sociais {
+    float: right;
+    position: absolute;
+    margin: 30px 0px 0px 1050px ;
+}
