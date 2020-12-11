@@ -146,3 +146,32 @@ if (numero2 % numero1 === 0) {
   }
 
 */
+
+
+//---------- Exercícios de funções ----------//
+
+
+// Exercício  1 // Não consegui fazer
+
+/*
+function arrayDeNumeros() {
+   const array = [10, 20, 30, 40, 50]
+   for (let i=0; i < array.length; i++) {
+     
+   }
+}
+*/
+
+
+// Exercício 2
+
+/*
+
+let funcaoAlert = () => {
+   return alert("Hello Future4");
+}
+
+funcaoAlert()
+
+*/
+
