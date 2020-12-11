@@ -175,3 +175,78 @@ funcaoAlert()
 
 */
 
+
+//---------- Exercícios de objetos ----------//
+
+
+// Exercício 1
+
+/**
+ * Objetos são como arrays mais complexas, são compartimentos onde podemos guardar tipos diferentes de coisas em um mesmo lugar.
+ * Podemos utilizar os objetos quando queremos guardar várias informações como números, strings e boleeans, para mais tarde utilizar cada uma de suas propriedades quando necessário.
+ * Arrays também armazenam um conjunto de informações como um objeto, porém podemos armazenar apenas um tipo de informação, número ou string ou boleean.
+ * Podemos usar as arrays para armazenar várias informações do mesmo tipo, para que possamos acessar seus itens sempre que necessário.
+ */
+
+
+ // Exercício 2
+
+ /*
+
+ function criaRetangulo(lado1, lado2) {
+      let objeto = {
+         largura: lado1,
+         altura: lado2,
+         perimetro: 2*(lado1+lado2),
+         area: lado1*lado2
+      }
+      return objeto;
+ }
+
+ let resultado = criaRetangulo(20, 40)
+ console.log(resultado)
+
+ */
+
+
+ // Exercício 3
+
+/*
+
+const filmeFavorito = {
+    titulo: "Edward mãos de tesoura",
+    ano: 1990,
+    diretor: "Tim Burton",
+    atores: ["Jhonny Depp", "Winona Ryder"]
+}
+
+   console.log("Venha assistir ao filme ", filmeFavorito.titulo, "de ", filmeFavorito.ano, "dirigido por ", filmeFavorito.diretor, "e estrelado por ", filmeFavorito.atores[0], "e ", filmeFavorito.atores[1])
+ 
+*/
+
+
+// Exercício 4
+
+/*
+
+let infoPessoal = {
+   nome: "Mariana",
+   idade: 31,
+   email: "mariana@gmail.com",
+   endereco: "Rua das Marmotas, 123"
+}
+
+function anonimizarPessoa() {
+   const infoAnonima = {
+      ...infoPessoal,
+      nome: "ANÔNIMO"
+   }
+   console.log(infoAnonima)
+}
+
+anonimizarPessoa()
+console.log(infoPessoal)
+
+*/
+
+
