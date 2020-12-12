@@ -151,15 +151,51 @@ if (numero2 % numero1 === 0) {
 //---------- Exercícios de funções ----------//
 
 
-// Exercício  1 // Não consegui fazer
+// Exercício  1
 
-/*
+/* 
+*
+
 function arrayDeNumeros() {
+
    const array = [10, 20, 30, 40, 50]
+
+   let maiorNumero = 0
+   let menorNumero = Infinity
+   let segundoMaiorNumero = 0
+   let segundoMenorNumero = Infinity
+   
+
    for (let i=0; i < array.length; i++) {
-     
+     if (array[i] > maiorNumero) {
+        maiorNumero = array[i]
+     }
    }
+
+   for (let i=0; i < array.length; i++) {
+      if (array[i] < menorNumero) {
+         menorNumero = array[i]
+      }
+    }
+
+   for (let i=0; i < array.length; i++) {
+      if ((array[i] < maiorNumero) && (array[i] >= segundoMaiorNumero)) {
+         segundoMaiorNumero = array[i]
+      }
+    }
+
+   for (let i=0; i < array.length; i++) {
+      if ((array[i] > menorNumero) && (array[i] <= segundoMenorNumero)) {
+         segundoMenorNumero = array[i]
+      }
+    }
+   
+    console.log(maiorNumero, segundoMaiorNumero)
+    console.log(menorNumero, segundoMenorNumero)
 }
+
+arrayDeNumeros()
+
 */
 
 
@@ -246,6 +282,224 @@ function anonimizarPessoa() {
 
 anonimizarPessoa()
 console.log(infoPessoal)
+
+*/
+
+//---------- Exercícios de funções de arrays ----------//
+// FALTA COMMITAR
+
+//Exercício 1
+
+/**
+ * a.
+
+   const arrayA = [
+	{nome: "Pedro", idade:20},
+	{nome: "João", idade:10},
+	{nome: "Paula", idade:12},
+	{nome: "Artur", idade:89} 
+]
+
+const arrayAdultos = arrayA.filter((pessoa, index, listaPessoas) => {
+      if (pessoa.idade >= 20) {
+         return true
+      }
+      return false
+})
+
+console.log(arrayAdultos)
+
+*/
+
+
+/**
+ * b.
+
+   const arrayB = [
+	{nome: "Pedro", idade:20},
+	{nome: "João", idade:10},
+	{nome: "Paula", idade:12},
+	{nome: "Artur", idade:89} 
+]
+
+const arrayCriancas = arrayB.filter((pessoa, index, listaPessoas) => {
+      if (pessoa.idade < 20) {
+         return true
+      }
+      return false
+})
+
+console.log(arrayCriancas)
+
+*/
+
+
+// Exercício 2
+
+/**
+ * a.
+
+const array = [1, 2, 3, 4, 5, 6]
+
+const multiplicaPorDois = array.map((numero, index, listaNumeros) => {
+   return listaNumeros[index]*2
+})
+
+console.log(multiplicaPorDois)
+
+*/
+
+/**
+ * b.
+
+const array = [1, 2, 3, 4, 5, 6]
+
+const multiplicaPorTres = array.map((numero, index, listaNumeros) => {
+   return `${numero*3}`
+})
+
+console.log(multiplicaPorTres)
+
+*/
+
+
+/**
+ * c.
+ 
+const array = [1, 2, 3, 4, 5, 6]
+
+const numPar = array.map((numero, index1, arrNumeros1) => {
+   if (numero % 2 === 0) {
+      return `${numero} é par`
+   }
+})
+
+console.log(numPar)
+
+const numImpar = array.map((num, index2, arrNumeros2) => {
+   if (num % 2 !== 0) {
+      return `${num} é ímpar`
+   }
+})
+
+console.log(numImpar)
+
+*/
+
+
+// Exercício 3
+
+
+/**
+ * a.
+ 
+const pessoas = [
+	{nome: "Paula", idade: 12, altura: 1.8},
+	{nome: "João", idade: 20, altura: 1.3},
+	{nome: "Pedro", idade: 15, altura: 1.9},
+	{nome: "Luciano", idade: 22, altura: 1.8},
+	{nome: "Artur", idade: 10, altura: 1.2},
+	{nome: "Soter", idade: 70, altura: 1.9}
+]
+
+const pessoasAutorizadas = pessoas.filter((pessoa, index, listaPessoas) => {
+   if ((pessoa.altura >= 1.5) && (pessoa.idade > 14) && (pessoa.idade < 60)) {
+      return true
+   }
+   return false
+})
+
+console.log(pessoasAutorizadas)
+
+*/
+
+
+/**
+ * b.
+
+const pessoas = [
+	{nome: "Paula", idade: 12, altura: 1.8},
+	{nome: "João", idade: 20, altura: 1.3},
+	{nome: "Pedro", idade: 15, altura: 1.9},
+	{nome: "Luciano", idade: 22, altura: 1.8},
+	{nome: "Artur", idade: 10, altura: 1.2},
+	{nome: "Soter", idade: 70, altura: 1.9}
+]
+
+const pessoasNaoAutorizadas = pessoas.filter((pessoa, index, listaPessoas) => {
+   if ((pessoa.altura >= 1.5) && (pessoa.idade > 14) && (pessoa.idade < 60)) {
+      return false
+   }
+   return true
+})
+
+console.log(pessoasNaoAutorizadas)
+
+*/
+
+
+// Exercício 4
+
+
+/*
+*
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const consultasMarcadas = consultas.map((paciente, index, listaPacientes) => {
+   if ((paciente.cancelada = false) && (paciente.genero === "feminino")) {
+      
+      return `Olá, Sra. ${paciente.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${paciente.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+   } else {
+      return `Olá, Sr. ${paciente.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${paciente.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+   }
+})
+
+
+const consultasCanceladas = consultas.map((paciente, index,listaPacientes) => {
+   if ((paciente.cancelada = true) && (paciente.genero === "feminino")) {
+      
+      return `Olá, Sra. ${paciente.nome}. Infelizmente, sua consulta marcada para o dia ${paciente.dataDaConsulta} foi cancelada. Se quiser, pode entrar em  contato conosco para remarcá-la`
+   } else {
+      
+      return `Olá, Sr. ${paciente.nome}. Infelizmente, sua consulta marcada para o dia ${paciente.dataDaConsulta} foi cancelada. Se quiser, pode entrar em  contato conosco para remarcá-la`
+   }
+})
+
+console.log(consultasMarcadas)
+console.log(consultasCanceladas)
+
+*/
+
+
+// Exercício 5
+
+/*
+*
+
+const contas = [
+	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
+
+contas.forEach((clientes, index, listaClientes) => {
+   let somaCompras = 0
+   for (let i=0; i< clientes.compras.length; i++) {
+      somaCompras += clientes.compras[i]
+      clientes.saldoTotal -= clientes.compras[i]
+   }
+   clientes.saldoTotal -= somaCompras 
+})
+
+console.log(contas)
 
 */
 
