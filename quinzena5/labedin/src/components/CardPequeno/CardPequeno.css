@@ -1,0 +1,35 @@
+.container-email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border: 1px solid black;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+.container-email:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+.container-endereco {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border: 1px solid black;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+.container-endereco:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+div > img {
+  width: 30px;
+}

@@ -1,0 +1,39 @@
+.container-pessoal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border: 1px solid black;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+.container-whatsapp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border: 1px solid black;
+  padding: 10px 0;
+  height: 60px;
+}
+
+.container-pessoal > img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.container-pessoal:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+.container-whatsapp > img {
+  width: 30px;
+}
+
+.container-whatsapp:hover {
+  background-color: darkgrey;
+  color: white;
+}
