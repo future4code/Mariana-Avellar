@@ -1,6 +1,22 @@
 import React from "react";
 import "./App.css";
 import Post from "./components/Post/Post";
+import styled from "styled-components";
+
+const  TituloForm = styled.h4`
+  display:flex;
+  align-items: center;
+`
+
+const InputStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`
+const ButtonStyle = styled.button`
+  background-color: orange;
+  border-radius: 3px;
+`
 
 class App extends React.Component {
   state = {
@@ -76,33 +92,42 @@ class App extends React.Component {
     return (
 
       <div className={"app-container"}>
+
         <div className={"app-posts"}>
           {listaPosts}
         </div>
 
         <div className="app-form">
-          <p>Digite e envie as informações para postar:</p>
-          <input
-            value={this.state.inputNome}
-            onChange={this.onChangeInputNome}
-            placeholder={"Nome"}
-          />
 
-          <input
-            value={this.state.inputFoto}
-            onChange={this.onChangeInputFoto}
-            placeholder={"Foto do usuário"}
-          />
-
-          <input
-            value={this.state.inputFotoPost}
-            onChange={this.onChangeInputFotoPost}
-            placeholder={"Foto do post"}
-          />
+          <TituloForm>Digite e envie as informações para postar:</TituloForm>
           
-          <button onClick={this.adicionarPost}> ENVIAR </button>
-        </div>
+          <InputStyle>
+            <input
+              value={this.state.inputNome}
+              onChange={this.onChangeInputNome}
+              placeholder={"Nome"}
+            />
+          </InputStyle>
 
+          <InputStyle>
+            <input
+              value={this.state.inputFoto}
+              onChange={this.onChangeInputFoto}
+              placeholder={"Foto do usuário"}
+            />
+          </InputStyle>
+
+          <InputStyle>
+            <input
+              value={this.state.inputFotoPost}
+              onChange={this.onChangeInputFotoPost}
+              placeholder={"Foto do post"}
+            />
+          </InputStyle>
+          
+          <ButtonStyle onClick={this.adicionarPost}> ENVIAR </ButtonStyle>
+        
+        </div>
       </div>
     );
   }
