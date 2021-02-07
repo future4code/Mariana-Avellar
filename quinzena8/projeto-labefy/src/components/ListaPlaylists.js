@@ -11,23 +11,7 @@ export default class ListaPlaylists extends React.Component {
     this.pegarPlaylist();
   }
 
-  pegarPlaylist = async () => {
-    try {
-      const resposta = await axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
-      {
-        headers: {
-          Authorization: "mariana-avellar-muyembe"
-        }
-      }
-      );
-
-      this.setState({ playlists: resposta.data.result.list });
-    } catch (erro) {
-      alert(erro.message);
-    }
-  };
-
-  /*pegarPlaylist = () => {
+  pegarPlaylist = () => {
     axios
       .get(
         "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
@@ -39,7 +23,7 @@ export default class ListaPlaylists extends React.Component {
       )
       .then((resposta) => this.setState({ playlists: resposta.data.result.list }))
       .catch((erro) => alert(erro.message));
-  };*/
+  };
 
   deletarPlaylist = (id) => {
     axios
