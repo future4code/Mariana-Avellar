@@ -10,11 +10,11 @@ import iconeComentario from '../../img/comment_icon.svg'
 
 const Post = (props) => {
 
-  const [curtido, setCurtido] = useState(false)
-  const [numeroCurtidas, setNumCurtidas] = useState(0)
-  const [comentando, setComentando] = useState(false)
-  const [numeroComentarios, setNumComentarios] = useState(0)
-  const [comentarios, setComentarios] = useSetstate([])
+  const [curtido, setCurtido] = useState(false);
+  const [numeroCurtidas, setNumCurtidas] = useState(0);
+  const [comentando, setComentando] = useState(false);
+  const [numeroComentarios, setNumComentarios] = useState(0);
+  const [comentarios, setComentarios] = useSetstate([]);
 
   const onClickCurtida = () => {
 
@@ -27,20 +27,19 @@ const Post = (props) => {
       setCurtido(!curtido)
       setNumCurtidas ( numeroCurtidas + 1 )
       }
-    }
-  };
+    };
 
   const onClickComentario = () => {
     setComentando( !comentando )
     setNumComentarios( numeroComentarios + 1 )
   };
 
-  const enviarComentario = (comentario) => {
-    const listaDeComentarios = [...comentarios, comentario]
+  const enviarComentario = (inputValue) => {
+    const listaDeComentarios = [...comentarios, {inputValue}]
       setComentarios( listaDeComentarios )
       setComentando( false )
       setNumComentarios( numeroComentarios + 1 )
-    }
+    };
 
   const iconeCurtida = {curtido} ? (iconeCoracaoPreto) : (iconeCoracaoBranco)
 
@@ -56,6 +55,8 @@ const Post = (props) => {
     })
   )
 
+};
+
   return (
     <PostContainer>
       <PostHeader>
@@ -69,13 +70,13 @@ const Post = (props) => {
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
-          valorContador={props.numeroCurtidas}
+          valorContador={numeroCurtidas}
         />
 
         <IconeComContador
           icone={iconeComentario}
           onClickIcone={onClickComentario}
-          valorContador={props.numeroComentarios}
+          valorContador={numeroComentarios}
         />
       </PostFooter>
       {caixaDeComentario}
