@@ -14,7 +14,7 @@ const Post = (props) => {
   const [numeroCurtidas, setNumCurtidas] = useState(0);
   const [comentando, setComentando] = useState(false);
   const [numeroComentarios, setNumComentarios] = useState(0);
-  const [comentarios, setComentarios] = useSetstate([]);
+  const [comentarios, setComentarios] = useState([]);
 
   const onClickCurtida = () => {
 
@@ -79,7 +79,7 @@ const Post = (props) => {
           valorContador={numeroComentarios}
         />
       </PostFooter>
-      {caixaDeComentario}
+      <div>{caixaDeComentario}</div>
     </PostContainer>
   )
 

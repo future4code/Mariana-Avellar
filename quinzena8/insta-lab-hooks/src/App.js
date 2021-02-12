@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './components/Post/Post';
 import styled from "styled-components"
+import IconeComContador from './components/IconeComContador/IconeComContador';
 
 const AppContainer = styled.div `
   display: flex;
@@ -17,6 +18,7 @@ const App = () => {
         fotoUsuario={'https://picsum.photos/50/50'}
         fotoPost={'https://picsum.photos/200/150'}
       />
+
     </AppContainer>
   );
 }
