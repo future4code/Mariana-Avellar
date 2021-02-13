@@ -31,11 +31,10 @@ const Post = (props) => {
 
   const onClickComentario = () => {
     setComentando( !comentando )
-    setNumComentarios( numeroComentarios + 1 )
   };
 
-  const enviarComentario = (inputValue) => {
-    const listaDeComentarios = [...comentarios, {inputValue}]
+  const enviarComentario = (comentario) => {
+    const listaDeComentarios = [...comentarios, comentario]
       setComentarios( listaDeComentarios )
       setComentando( false )
       setNumComentarios( numeroComentarios + 1 )
@@ -54,8 +53,6 @@ const Post = (props) => {
       )
     })
   )
-
-};
 
   return (
     <PostContainer>
@@ -82,5 +79,7 @@ const Post = (props) => {
       <div>{caixaDeComentario}</div>
     </PostContainer>
   )
+
+};
 
 export default Post
