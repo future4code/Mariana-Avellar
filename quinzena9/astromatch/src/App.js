@@ -2,7 +2,8 @@ import React from "react";
 import ProfileCard from "./components/ProfileCard";
 import MatchScreen from "./components/MatchScreen";
 
- export default function App() {
+ export default function App(props) {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,9 +13,10 @@ import MatchScreen from "./components/MatchScreen";
       </header>
       <main>
       <ProfileCard 
-          photo = {"https://picsum.photos/200/300"}
-          name = {"Ilene"}
-          bio = {"I like long walks by the beach and sunsets."}
+          photo = {props.photo}
+          name = {props.name}
+          age = {props.age}
+          bio = {props.bio}
       />
       </main>
     </div>
