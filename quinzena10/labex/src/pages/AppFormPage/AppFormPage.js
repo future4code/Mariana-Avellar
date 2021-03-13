@@ -1,8 +1,11 @@
 import React from "react";
 
 const AppFormPage = () => {
+
     return (
-    <h1>Subscription Page</h1>
+        <div className="form-container">
+            <h1>Subscription Page</h1>
+        </div>
     )
 }
 

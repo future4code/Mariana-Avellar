@@ -1,8 +1,11 @@
 import React from "react";
 
 const CreateTripPage = () => {
+
     return (
-    <h1>Create Trip Page</h1>
+        <div className="Create-trip-container">
+            <h1>Create Trip Page</h1>
+        </div>
     )
 }
 
