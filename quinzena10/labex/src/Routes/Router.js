@@ -25,13 +25,13 @@ export default function Router() {
                 <Route exact path="/login">
                     <LoginPage/>
                 </Route>
-                <Route exact path="/trips/list">
+                <Route exact path="/trip-list">
                     <ListTripPage/>
                 </Route>
-                <Route exact path="/trips/create">
+                <Route exact path="/trip-create">
                     <CreateTripPage/>
                 </Route>
-                <Route exact path="/trips/details">
+                <Route exact path="/trip-details">
                     <TripDetailsPage/>
                 </Route>
                 <Route exact path="/error404">
