@@ -10,6 +10,10 @@ export const goToLoginPage = (history) => {
     history.replace("/login");
 };
 
+export const goToTripListPage = (history) => {
+    history.push("/trip-list");
+};
+
 export const goToTripDetailsPage = (history) => {
     history.push("/trip-details");
 };

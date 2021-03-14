@@ -1,7 +1,7 @@
 import {React, useState} from "react";
 
-const useInput = (value) => {
-    const [input, setInput] = useState(value);
+const useInput = (initialValue) => {
+    const [input, setInput] = useState(initialValue);
 
     const onChangeInput = (e) => {
         setInput(e.target.value);

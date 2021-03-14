@@ -3,14 +3,16 @@ import axios from "axios";
 import useInput from "../../hooks/useInput";
 import {BASE_URL} from "../../components/Requests";
 import {useHistory} from "react-router-dom";
-import {goToTripDetailsPage} from "../../Routes/Coordinator";
+import {goToTripListPage} from "../../Routes/Coordinator";
 
 const LoginPage = () => {
     const [email, onChangeEmail] = useInput("");
     const [password, onChangePassword] = useInput("");
     const history = useHistory();
 
-    const onSubmitLogin = () => {
+    const onSubmitLogin = (event) => {
+        event.preventDefault();
+
         const body={
             email,
             password
@@ -18,7 +20,7 @@ const LoginPage = () => {
         axios.post(BASE_URL + "/login", body)
         .then((response) => {
             window.localStorage.setItem("token", response.data.token)
-            history.push("/trip-details")
+            history.push("/trip-list")
         })
     };
 
@@ -26,16 +28,29 @@ const LoginPage = () => {
         const token = localStorage.getItem("token");
 
         if (token) {
-            goToTripDetailsPage(history);
+            goToTripListPage(history);
         }
     }, []);
 
     return (
         <div>
             <h1>Login Page</h1>
-            <input placeholder="email" value={email} onChange={onChangeEmail}/>
-            <input type={"password"} placeholder="senha" value={password} onChange={onChangePassword}/>
-            <button onClick={onSubmitLogin} type={"submit"}>ACESSAR</button>
+
+            <form onSubmit={onSubmitLogin}>
+                <input 
+                    type={"email"}
+                    placeholder={"email"}
+                    value={email}
+                    onChange={onChangeEmail}
+                />
+                <input 
+                    type={"password"} 
+                    placeholder={"senha"}
+                    value={password}
+                    onChange={onChangePassword}
+                />
+                <button>ACESSAR</button>
+            </form>
         </div>
     )
 }
