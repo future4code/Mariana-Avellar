@@ -19,9 +19,7 @@ const LoginPage = () => {
         .then((response) => {
             window.localStorage.setItem("token", response.data.token)
             history.push("/trip-details")
-        }).catch((error) => {
-            alert(error)
-        });
+        })
     };
 
     useEffect (() => {

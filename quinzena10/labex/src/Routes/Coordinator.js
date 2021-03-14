@@ -7,7 +7,7 @@ export const goToAppFormPage = (history) => {
 };
 
 export const goToLoginPage = (history) => {
-    history.push("/login");
+    history.replace("/login");
 };
 
 export const goToTripDetailsPage = (history) => {
