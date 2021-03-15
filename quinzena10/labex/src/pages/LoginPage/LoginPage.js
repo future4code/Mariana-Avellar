@@ -4,6 +4,40 @@ import useInput from "../../hooks/useInput";
 import {BASE_URL} from "../../components/Requests";
 import {useHistory} from "react-router-dom";
 import {goToTripListPage} from "../../Routes/Coordinator";
+import styled from "styled-components";
+
+//******** ESTILIZAÇÃO *********//
+
+const LoginPageContainer = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+`;
+
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Input = styled.input`
+    height: 40px;
+    background-color: whitesmoke;
+    border: none;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 14px;
+    text-decoration:underline;
+`;
+
+const Button = styled.button`
+    width: 100%;
+    height: 36px;
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+`;
+
+//******** // *********//
 
 const LoginPage = () => {
     const [email, onChangeEmail] = useInput("");
@@ -33,25 +67,25 @@ const LoginPage = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Login Page</h1>
+        <LoginPageContainer>
+            <h1>Login do usuário</h1>
 
-            <form onSubmit={onSubmitLogin}>
-                <input 
+            <Form onSubmit={onSubmitLogin}>
+                <Input 
                     type={"email"}
-                    placeholder={"email"}
+                    placeholder={"Email"}
                     value={email}
                     onChange={onChangeEmail}
                 />
-                <input 
+                <Input 
                     type={"password"} 
-                    placeholder={"senha"}
+                    placeholder={"Senha"}
                     value={password}
                     onChange={onChangePassword}
                 />
-                <button>ACESSAR</button>
-            </form>
-        </div>
+                <Button>ACESSAR</Button>
+            </Form>
+        </LoginPageContainer>
     )
 }
 

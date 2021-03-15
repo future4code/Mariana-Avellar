@@ -5,6 +5,7 @@ import { BASE_URL } from "../../components/Requests";
 import styled from "styled-components";
 
 //******** ESTILIZAÇÃO *********//
+
 const AppFormPageContainer = styled.div`
   width: 100%;
   text-align: center;
@@ -40,7 +41,7 @@ const Button = styled.button`
   color: white;
   font-size: 16px;
   border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 10px;
 `;
 
 //*******//*******//
